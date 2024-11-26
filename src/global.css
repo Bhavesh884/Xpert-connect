@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply m-0 font-montserrat;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+* {
+  @apply font-montserrat;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.activeExpert {
+  @apply sm:mx-2 transform transition-all duration-500 ease-in-out w-full sm:w-[150%] h-[36vh] md:h-[56vh] lg:h-[65vh];
+}
+.expertDiv h2 {
+  @apply text-[5vw] sm:text-[2.6vw] absolute w-auto block h-auto ml-[15px] bottom-[5%] sm:bottom-[3%] font-light;
+  writing-mode: vertical-lr;
+  rotate: 180deg;
+}
+.activeExpert h2 {
+  @apply bottom-[7%] sm:bottom-[5%] tracking-[3px] w-auto font-extrabold;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* Tailwind CSS classes for the heatmap */
+.color-empty {
+  fill: #ebedf0; /* Empty cell color */
+}
+
+.body-scroll-lock {
+  overflow: hidden;
+}
+
+.color-blue-0 {
+  fill: #cce4f6; /* Low contribution color */
+}
+
+.color-blue-1 {
+  fill: #87ceeb;
+}
+
+.color-blue-2 {
+  fill: #4da9f0;
+}
+
+.color-blue-3 {
+  fill: #007bff; /* High contribution color */
+}
+
+.btnBlack {
+  background-color: #2a2a2a;
+}
+
+/* Custom styles for Quill Toolbar */
+.custom-toolbar {
+  background-color: #f8f9fa; /* Set the background color of the toolbar */
+  padding: 8px; /* Add padding to the toolbar */
+  border-bottom: 1px solid #dee2e6; /* Add a bottom border */
+}
+.ql-formats {
+  @apply overflow-visible;
+}
+/* Styles for toolbar buttons */
+.custom-toolbar .ql-formats button {
+  background-color: transparent; /* Set button background color */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Set cursor to pointer */
+  margin-right: 4px; /* Add margin between buttons */
+}
+
+/* Styles for dropdown selects */
+.custom-toolbar .ql-formats select {
+  appearance: none; /* Remove default appearance */
+  background-color: #fff; /* Set dropdown background color */
+  border: 1px solid #ced4da; /* Add dropdown border */
+  padding: 4px 8px; /* Add padding to dropdown */
+  cursor: pointer; /* Set cursor to pointer */
+  margin-right: 4px; /* Add margin between selects */
+}
+
+/* Styles for undo and redo buttons */
+.custom-toolbar .ql-formats .ql-undo,
+.custom-toolbar .ql-formats .ql-redo {
+  background-color: #fff; /* Set button background color */
+  border: 1px solid #ced4da; /* Add button border */
+  padding: 4px; /* Add padding to button */
+  cursor: pointer; /* Set cursor to pointer */
+  margin-right: 4px; /* Add margin between buttons */
+}
+
+/* Styles for undo and redo icons */
+.custom-toolbar .ql-formats .ql-undo svg,
+.custom-toolbar .ql-formats .ql-redo svg {
+  width: 12px; /* Set icon width */
+  height: 12px; /* Set icon height */
+  fill: #495057; /* Set icon color */
+}
+
+/* Styles for dropdown arrow */
+.custom-toolbar .ql-formats .ql-undo::after,
+.custom-toolbar .ql-formats .ql-redo::after {
+  content: ""; /* Add pseudo-element */
+  display: inline-block; /* Make pseudo-element inline */
+  width: 0; /* Set width to 0 */
+  height: 0; /* Set height to 0 */
+  border-style: solid; /* Set border style */
+  border-width: 4px 3px 0; /* Set border width */
+  border-color: #495057 transparent transparent; /* Set border color */
+  margin-left: 4px; /* Add margin between button and arrow */
+}
+
+.dangerHtml img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.rbc-toolbar-label {
+  font-weight: 700;
+  @apply my-4 md:my-0
+}
+.rbc-month-header .rbc-header {
+  padding: 10px 3px;
+}
+.rbc-header span {
+  font-weight: 500;
+}
+.rbc-row .rbc-month-header{
+  border-left: 3px solid #ddd;
+}
+.rbc-day-bg + .rbc-day-bg {
+  border-left: 3px solid #ddd;
+}
+.rbc-header + .rbc-header {
+  border-left: 3px solid #ddd;
+}
+.rbc-row-bg{
+  border:0.1px solid #ddd;
+}
+
+.rbc-row-bg .rbc-today {
+  background-color: rgba(108, 161, 248, 0.5);
+}
+
+.rbc-month-row + .rbc-month-row {  border-top:none;
+}
+.rbc-row-segment{
+  padding: 1px 6px 0px 7px;
+}
+
+.rbc-row-segment .rbc-event {
+  background-color: white;
+  padding: 0;
+  border: 1px solid #97BAEF;
+  box-shadow: 1px 1px 2px 1px #97BAEF;
+  border-radius: 2px;
+}
+
+
+.rbc-event .rbc-selected,
+.rbc-day-slot .rbc-selected .rbc-background-event {
+  background-color: chocolate;
+}
+
+.rbc-event-content {
+  @apply text-gray-500;
+  background-color: white;
+  border: 1px solid black;
+  padding: 3px;
+  font-size: 14px;
+}
+
+.shimmer {
+  background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+  animation: shimmer 2s infinite linear;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+.modal div {
+  margin-bottom: 10px;
+}
+.modal button {
+  margin-right: 10px;
+}
+
+.custom-toast-container {
+  margin-top: 60px;
+}
